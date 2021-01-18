@@ -9,7 +9,7 @@ pipeline{
             stage('Install Docker & Docker compose'){
                 steps{
                     sh "curl https://get.docker.com | sudo bash"
-                    sh "sudo curl -L 'https://github.com/docker/compose/releases/download/\${version}/docker-compose-$(uname -s)-\$(uname -m)' -o /usr/local/bin/docker-compose"
+                    sh "sudo curl -L 'https://github.com/docker/compose/releases/download/\${version}/docker-compose-\$(uname -s)-\$(uname -m)' -o /usr/local/bin/docker-compose"
                 }
             }
             stage('Deploy the application'){
